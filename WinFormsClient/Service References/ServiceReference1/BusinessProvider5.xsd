@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" />
+  <xs:import schemaLocation="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Soneta.Types" />
+  <xs:element name="Execute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q1:WindowRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecuteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="ExecuteResult" nillable="true" type="q2:WindowsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q3:WindowFormRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFormResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="GetFormResult" nillable="true" type="q4:FormElement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="req" nillable="true" type="q5:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="PingResult" nillable="true" type="q6:PingResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q7:PingRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="PingSessionResult" nillable="true" type="q8:PingResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cx" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="info" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsFileReady">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q9:FileReadyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsFileReadyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsFileReadyResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentCulture">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cx" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentCultureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCurrentCultureResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="fileRequest" nillable="true" type="q10:FileReadyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="GetFileResult" nillable="true" type="q11:InvokerResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="info" nillable="true" type="q12:ExceptionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddLogResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Test">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q13:TestRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TestResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvokeServiceMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Soneta.Types" minOccurs="0" name="invokeServiceMethodParams" nillable="true" type="q14:ServiceMethodInvokerParams" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvokeServiceMethodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="InvokeServiceMethodResult" nillable="true" type="q15:InvokeServiceMethodResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFoldersTree">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q16:FolderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFoldersTreeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="GetFoldersTreeResult" nillable="true" type="q17:ArrayOfFolderItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q18:FolderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="GetModulesResult" nillable="true" type="q19:ArrayOfFolderItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFavorites">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q20:FolderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFavoritesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="GetFavoritesResult" nillable="true" type="q21:ArrayOfFolderItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q22:FolderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="GetRecentResult" nillable="true" type="q23:ArrayOfFolderItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q24:FolderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="GetFolderResult" nillable="true" type="q25:WindowsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q26:FolderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="GetStartResult" nillable="true" type="q27:WindowsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q28:FolderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="GetDataResult" nillable="true" type="q29:WindowsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessAspx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="req" nillable="true" type="q30:FolderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessAspxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="ProcessAspxResult" nillable="true" type="q31:WindowsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Scripter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="rq" nillable="true" type="q32:ScripterRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ScripterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="ScripterResult" nillable="true" type="q33:ScripterRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="loginInfo" nillable="true" type="q34:LoginInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="LoginResult" nillable="true" type="q35:LoginInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Logoff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="handle" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogoffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LogoffResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOperators">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dbName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOperatorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetOperatorsResult" nillable="true" type="q36:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetNetPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="loginInfo" nillable="true" type="q37:LoginInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetNetPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ResetNetPasswordResult" nillable="true" type="q38:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeNetPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="pwdInfo" nillable="true" type="q39:ChangePwdInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeNetPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChangeNetPasswordResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterProviderForUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="providerInfo" nillable="true" type="q40:ProviderUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterProviderForUserResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExternalAccountProviders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="externalProvidersInfo" nillable="true" type="q41:ExternalProvidersInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExternalAccountProvidersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="GetExternalAccountProvidersResult" nillable="true" type="q42:ExternalAccountProvidersResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDbConfigSettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="dbConfigSettingsInfo" nillable="true" type="q43:DbConfigSettingsInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDbConfigSettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="GetDbConfigSettingsResult" nillable="true" type="q44:DbConfigSettingsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="loginInfo" nillable="true" type="q45:LoginInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="AuthenticateUserResult" nillable="true" type="q46:AuthenticateUserResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeUserPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="userInfo" nillable="true" type="q47:ChangePwdUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangeUserPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" minOccurs="0" name="ChangeUserPasswordResult" nillable="true" type="q48:ChangePwdUserResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

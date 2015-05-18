@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5af8847a-8467-4d02-97d7-dcc12528991f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://localhost:44303/Business/BusinessProvider.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BusinessProvider.xsd" MetadataType="Schema" ID="77cbb7c3-40e4-4da7-9903-4f525fa138e3" SourceId="1" SourceUrl="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd1" />
+    <MetadataFile FileName="BusinessProvider1.xsd" MetadataType="Schema" ID="aa02b15b-f20c-4a29-b6c1-c4ea676d9778" SourceId="1" SourceUrl="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd2" />
+    <MetadataFile FileName="BusinessProvider2.xsd" MetadataType="Schema" ID="ec420478-21f2-4e9c-9cdd-ef9e214186eb" SourceId="1" SourceUrl="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd3" />
+    <MetadataFile FileName="BusinessProvider.disco" MetadataType="Disco" ID="e0fbc2dd-f31f-41a6-8f17-cfd9edad13c5" SourceId="1" SourceUrl="https://localhost:44303/Business/BusinessProvider.svc?disco" />
+    <MetadataFile FileName="BusinessProvider3.xsd" MetadataType="Schema" ID="cecf2ae2-5419-49df-a3a1-3c736cbc4036" SourceId="1" SourceUrl="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd5" />
+    <MetadataFile FileName="BusinessProvider4.xsd" MetadataType="Schema" ID="53b49ae6-b7ca-45f9-95f2-29f654964f2c" SourceId="1" SourceUrl="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd4" />
+    <MetadataFile FileName="BusinessProvider.wsdl" MetadataType="Wsdl" ID="92d70ac2-9573-47c0-8a93-06b55b31ba74" SourceId="1" SourceUrl="https://localhost:44303/Business/BusinessProvider.svc?wsdl" />
+    <MetadataFile FileName="BusinessProvider5.xsd" MetadataType="Schema" ID="c56074c9-e55d-4a50-b38f-619a7feb9a3b" SourceId="1" SourceUrl="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

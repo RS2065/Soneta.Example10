@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BusinessProvider" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" />
+      <xsd:import schemaLocation="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Soneta.Types" />
+      <xsd:import schemaLocation="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Soneta.Business.UI" />
+      <xsd:import schemaLocation="https://localhost:44303/Business/BusinessProvider.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBusinessProvider_Execute_InputMessage">
+    <wsdl:part name="parameters" element="tns:Execute" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_Execute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetForm" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_PingSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:PingSession" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_PingSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_SetInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetInfo" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_SetInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_IsFileReady_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsFileReady" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_IsFileReady_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsFileReadyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetCurrentCulture_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentCulture" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetCurrentCulture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentCultureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFile" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_AddLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLog" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_AddLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_Test_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_Test_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_InvokeServiceMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:InvokeServiceMethod" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_InvokeServiceMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InvokeServiceMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetFoldersTree_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoldersTree" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetFoldersTree_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoldersTreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetModules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModules" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetModules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetFavorites_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavorites" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetFavorites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoritesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetRecent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecent" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetRecent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolder" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetStart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStart" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetStart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_ProcessAspx_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessAspx" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_ProcessAspx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessAspxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_Scripter_InputMessage">
+    <wsdl:part name="parameters" element="tns:Scripter" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_Scripter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScripterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_Logoff_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logoff" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_Logoff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetOperators_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperators" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetOperators_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_ResetNetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetNetPassword" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_ResetNetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetNetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_ChangeNetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeNetPassword" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_ChangeNetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeNetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_RegisterProviderForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterProviderForUser" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_RegisterProviderForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterProviderForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetExternalAccountProviders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExternalAccountProviders" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetExternalAccountProviders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExternalAccountProvidersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetDbConfigSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDbConfigSettings" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_GetDbConfigSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDbConfigSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_ChangeUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessProvider_ChangeUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBusinessProvider">
+    <wsdl:operation name="Execute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWindowService/Execute" message="tns:IBusinessProvider_Execute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWindowService/ExecuteResponse" message="tns:IBusinessProvider_Execute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWindowService/GetForm" message="tns:IBusinessProvider_GetForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWindowService/GetFormResponse" message="tns:IBusinessProvider_GetForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWindowService/Ping" message="tns:IBusinessProvider_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWindowService/PingResponse" message="tns:IBusinessProvider_Ping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PingSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWindowService/PingSession" message="tns:IBusinessProvider_PingSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWindowService/PingSessionResponse" message="tns:IBusinessProvider_PingSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWindowService/SetInfo" message="tns:IBusinessProvider_SetInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWindowService/SetInfoResponse" message="tns:IBusinessProvider_SetInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsFileReady">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWindowService/IsFileReady" message="tns:IBusinessProvider_IsFileReady_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWindowService/IsFileReadyResponse" message="tns:IBusinessProvider_IsFileReady_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentCulture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWindowService/GetCurrentCulture" message="tns:IBusinessProvider_GetCurrentCulture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWindowService/GetCurrentCultureResponse" message="tns:IBusinessProvider_GetCurrentCulture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWindowService/GetFile" message="tns:IBusinessProvider_GetFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWindowService/GetFileResponse" message="tns:IBusinessProvider_GetFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWindowService/AddLog" message="tns:IBusinessProvider_AddLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWindowService/AddLogResponse" message="tns:IBusinessProvider_AddLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWindowService/Test" message="tns:IBusinessProvider_Test_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWindowService/TestResponse" message="tns:IBusinessProvider_Test_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InvokeServiceMethod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWindowService/InvokeServiceMethod" message="tns:IBusinessProvider_InvokeServiceMethod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWindowService/InvokeServiceMethodResponse" message="tns:IBusinessProvider_InvokeServiceMethod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFoldersTree">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFolderService/GetFoldersTree" message="tns:IBusinessProvider_GetFoldersTree_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFolderService/GetFoldersTreeResponse" message="tns:IBusinessProvider_GetFoldersTree_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFolderService/GetModules" message="tns:IBusinessProvider_GetModules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFolderService/GetModulesResponse" message="tns:IBusinessProvider_GetModules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavorites">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFolderService/GetFavorites" message="tns:IBusinessProvider_GetFavorites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFolderService/GetFavoritesResponse" message="tns:IBusinessProvider_GetFavorites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFolderService/GetRecent" message="tns:IBusinessProvider_GetRecent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFolderService/GetRecentResponse" message="tns:IBusinessProvider_GetRecent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFolderService/GetFolder" message="tns:IBusinessProvider_GetFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFolderService/GetFolderResponse" message="tns:IBusinessProvider_GetFolder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStart">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFolderService/GetStart" message="tns:IBusinessProvider_GetStart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFolderService/GetStartResponse" message="tns:IBusinessProvider_GetStart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFolderService/GetData" message="tns:IBusinessProvider_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFolderService/GetDataResponse" message="tns:IBusinessProvider_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessAspx">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFolderService/ProcessAspx" message="tns:IBusinessProvider_ProcessAspx_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFolderService/ProcessAspxResponse" message="tns:IBusinessProvider_ProcessAspx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Scripter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFolderService/Scripter" message="tns:IBusinessProvider_Scripter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFolderService/ScripterResponse" message="tns:IBusinessProvider_Scripter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/Login" message="tns:IBusinessProvider_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/LoginResponse" message="tns:IBusinessProvider_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logoff">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/Logoff" message="tns:IBusinessProvider_Logoff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/LogoffResponse" message="tns:IBusinessProvider_Logoff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperators">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/GetOperators" message="tns:IBusinessProvider_GetOperators_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/GetOperatorsResponse" message="tns:IBusinessProvider_GetOperators_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetNetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/ResetNetPassword" message="tns:IBusinessProvider_ResetNetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/ResetNetPasswordResponse" message="tns:IBusinessProvider_ResetNetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/ChangeNetPassword" message="tns:IBusinessProvider_ChangeNetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/ChangeNetPasswordResponse" message="tns:IBusinessProvider_ChangeNetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterProviderForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/RegisterProviderForUser" message="tns:IBusinessProvider_RegisterProviderForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/RegisterProviderForUserResponse" message="tns:IBusinessProvider_RegisterProviderForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExternalAccountProviders">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/GetExternalAccountProviders" message="tns:IBusinessProvider_GetExternalAccountProviders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/GetExternalAccountProvidersResponse" message="tns:IBusinessProvider_GetExternalAccountProviders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDbConfigSettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/GetDbConfigSettings" message="tns:IBusinessProvider_GetDbConfigSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/GetDbConfigSettingsResponse" message="tns:IBusinessProvider_GetDbConfigSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/AuthenticateUser" message="tns:IBusinessProvider_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/AuthenticateUserResponse" message="tns:IBusinessProvider_AuthenticateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILoginService/ChangeUserPassword" message="tns:IBusinessProvider_ChangeUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILoginService/ChangeUserPasswordResponse" message="tns:IBusinessProvider_ChangeUserPassword_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBusinessProvider" type="tns:IBusinessProvider">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Execute">
+      <soap:operation soapAction="http://tempuri.org/IWindowService/Execute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForm">
+      <soap:operation soapAction="http://tempuri.org/IWindowService/GetForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://tempuri.org/IWindowService/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PingSession">
+      <soap:operation soapAction="http://tempuri.org/IWindowService/PingSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetInfo">
+      <soap:operation soapAction="http://tempuri.org/IWindowService/SetInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsFileReady">
+      <soap:operation soapAction="http://tempuri.org/IWindowService/IsFileReady" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentCulture">
+      <soap:operation soapAction="http://tempuri.org/IWindowService/GetCurrentCulture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <soap:operation soapAction="http://tempuri.org/IWindowService/GetFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLog">
+      <soap:operation soapAction="http://tempuri.org/IWindowService/AddLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/IWindowService/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvokeServiceMethod">
+      <soap:operation soapAction="http://tempuri.org/IWindowService/InvokeServiceMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoldersTree">
+      <soap:operation soapAction="http://tempuri.org/IFolderService/GetFoldersTree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <soap:operation soapAction="http://tempuri.org/IFolderService/GetModules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavorites">
+      <soap:operation soapAction="http://tempuri.org/IFolderService/GetFavorites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecent">
+      <soap:operation soapAction="http://tempuri.org/IFolderService/GetRecent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolder">
+      <soap:operation soapAction="http://tempuri.org/IFolderService/GetFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStart">
+      <soap:operation soapAction="http://tempuri.org/IFolderService/GetStart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IFolderService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessAspx">
+      <soap:operation soapAction="http://tempuri.org/IFolderService/ProcessAspx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scripter">
+      <soap:operation soapAction="http://tempuri.org/IFolderService/Scripter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/ILoginService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logoff">
+      <soap:operation soapAction="http://tempuri.org/ILoginService/Logoff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperators">
+      <soap:operation soapAction="http://tempuri.org/ILoginService/GetOperators" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetNetPassword">
+      <soap:operation soapAction="http://tempuri.org/ILoginService/ResetNetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeNetPassword">
+      <soap:operation soapAction="http://tempuri.org/ILoginService/ChangeNetPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterProviderForUser">
+      <soap:operation soapAction="http://tempuri.org/ILoginService/RegisterProviderForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExternalAccountProviders">
+      <soap:operation soapAction="http://tempuri.org/ILoginService/GetExternalAccountProviders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDbConfigSettings">
+      <soap:operation soapAction="http://tempuri.org/ILoginService/GetDbConfigSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <soap:operation soapAction="http://tempuri.org/ILoginService/AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserPassword">
+      <soap:operation soapAction="http://tempuri.org/ILoginService/ChangeUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BusinessProvider">
+    <wsdl:port name="BasicHttpBinding_IBusinessProvider" binding="tns:BasicHttpBinding_IBusinessProvider">
+      <soap:address location="http://localhost:1080/Business/BusinessProvider.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

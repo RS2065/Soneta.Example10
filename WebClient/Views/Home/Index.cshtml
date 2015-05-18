@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row" style="padding:10px;">
+    <div class="col-md-4">
+        <button id="import" style="width: 150px; height:30px;" title="Pobierz cennik">Pobierz cennik</button>
+        <button id="export" style="width: 150px; height:30px;" disabled title="Wyślij cennik">Wyślij cennik</button>
+    </div>
+</div>
+<div class="row" style="padding:10px;">
+    <textarea id="content" cols="100" rows="20" style="max-width: 800px;"></textarea>
+</div>
+
+<script type="text/javascript">
+    var serviceAddress = "https://localhost:44303/WindowJSON/InvokeServiceMethod",
+        serviceName = "Soneta.Examples.Example10.Extender.ICennikSerwis, Soneta.Examples",
+        dbName = "konferencja2015",
+        operator = "Administrator";
+
+    $("#import").click(function (args) {
+        $.ajax({
+            type: "POST",
+            url: serviceAddress,
+            data: JSON.stringify({
+                DatabaseHandle: dbName,
+                Operator: operator,
+                Password: "",
+                ServiceName: serviceName,
+                MethodName: "ImportujCennik",
+                MethodArgs: {}
+            }),
+            success: function (msg) {
+                if (msg.ResultInstance !== undefined && msg.ResultInstance !== "") {
+                    $("#content").css("color", "#008900");
+                    $("#content").val(msg.ResultInstance);
+                    $("#export").removeAttr("disabled");
+                }
+                else if (msg.ExceptionMessage !== "") {
+                    $("#content").css("color", "#ff0000");
+                    $("#content").val(msg.ExceptionMessage);
+                }
+            },
+            error: function (msg) {
+                $("#content").css("color", "#ff0000");
+                $("#content").val("-- Błąd wywołania metody serwisu --");
+            }
+        });
+    });
+
+
+    $("#export").click(function (args) {
+        $.ajax({
+            type: "POST",
+            url: serviceAddress,
+            data: JSON.stringify({
+                DatabaseHandle: dbName,
+                Operator: operator,
+                Password: "",
+                ServiceName: serviceName,
+                MethodName: "EksportujCennik",
+                MethodArgs: { "tsvContent" : $("#content").val() }
+            }),
+            success: function (msg) {
+                if (msg.ExceptionMessage !== "") {
+                    $("#content").css("color", "#ff0000");
+                    $("#content").val(msg.ExceptionMessage);
+                }
+                else {
+                    $("#content").css("color", "#000000");
+                    $("#content").val("-- Wysyłanie cennika do serwisu zakończone --");
+                    $("#export").attr("disabled", "disabled");
+                }
+            },
+            error: function (msg) {
+                $("#content").css("color", "#ff0000");
+                $("#content").val("-- Błąd wywołania metody serwisu --");
+            }
+        });
+    });
+
+</script>
