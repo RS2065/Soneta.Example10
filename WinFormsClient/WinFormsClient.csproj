@@ -80,59 +80,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\ServiceReference1\BusinessProvider.wsdl" />
-    <None Include="Service References\ServiceReference1\BusinessProvider.xsd">
+    <None Include="Service References\ServiceReference1\MethodInvokerService.wsdl" />
+    <None Include="Service References\ServiceReference1\MethodInvokerService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\BusinessProvider1.xsd">
+    <None Include="Service References\ServiceReference1\MethodInvokerService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\BusinessProvider2.xsd">
+    <None Include="Service References\ServiceReference1\MethodInvokerService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\BusinessProvider3.xsd">
+    <None Include="Service References\ServiceReference1\MethodInvokerService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\BusinessProvider4.xsd">
+    <None Include="Service References\ServiceReference1\MethodInvokerService4.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference1\BusinessProvider5.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference1\WinFormsClient.ServiceReference1.AuthenticateUserResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WinFormsClient.ServiceReference1.ChangePwdUserResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WinFormsClient.ServiceReference1.DbConfigSettingsResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WinFormsClient.ServiceReference1.ExternalAccountProvidersResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WinFormsClient.ServiceReference1.FolderItem.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WinFormsClient.ServiceReference1.FormElement.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WinFormsClient.ServiceReference1.InvokerResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference1\WinFormsClient.ServiceReference1.InvokeServiceMethodResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WinFormsClient.ServiceReference1.LoginInfoResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WinFormsClient.ServiceReference1.PingResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WinFormsClient.ServiceReference1.ScripterRequest.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WinFormsClient.ServiceReference1.WindowsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
@@ -146,7 +110,7 @@
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReference1\BusinessProvider.disco" />
+    <None Include="Service References\ServiceReference1\MethodInvokerService.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceReference1\configuration91.svcinfo" />

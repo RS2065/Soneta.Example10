@@ -7,7 +7,7 @@ using WinFormsClient.ServiceReference1;
 namespace WinFormsClient {
     public partial class Form1 : Form {
 
-        private const string DbName = "konferencja2015";
+        private const string DbName = "demo";
         private const string ServiceName = "Soneta.Examples.Example10.Extender.ICennikSerwis, Soneta.Examples";
 
         public Form1() {
@@ -15,7 +15,7 @@ namespace WinFormsClient {
         }
 
         private async void button1_Click(object sender, EventArgs e) {
-            var client = new BusinessProviderClient();
+            var client = new MethodInvokerServiceClient();
             var result = await client.InvokeServiceMethodAsync(new ServiceMethodInvokerParams {
                 DatabaseHandle = DbName,
                 Operator = "Administrator",
@@ -36,7 +36,7 @@ namespace WinFormsClient {
         }
 
         private async void button2_Click(object sender, EventArgs e) {
-            var client = new BusinessProviderClient();
+            var client = new MethodInvokerServiceClient();
             var result = await client.InvokeServiceMethodAsync(new ServiceMethodInvokerParams {
                 DatabaseHandle = DbName,
                 Operator = "Administrator",

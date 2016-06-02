@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Soneta.Net.Types" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:1080/Business/MethodInvokerService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Soneta.Types" />
+  <xs:complexType name="ServiceMethodInvokerParams">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Soneta.Types" base="q1:InternalServiceMethodInvokerParams">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConnectionInfo" nillable="true" type="tns:ConnectionInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ServiceMethodInvokerParams" nillable="true" type="tns:ServiceMethodInvokerParams" />
+  <xs:complexType name="ConnectionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Database" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Operator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Server" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConnectionInfo" nillable="true" type="tns:ConnectionInfo" />
+  <xs:complexType name="InvokeServiceMethodResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExceptionMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsEmpty" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsException" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ResultInstance" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvokeServiceMethodResult" nillable="true" type="tns:InvokeServiceMethodResult" />
+</xs:schema>
