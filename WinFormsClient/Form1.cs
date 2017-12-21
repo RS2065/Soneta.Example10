@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using WinFormsClient.ServiceReference1;
+using System.Configuration;
 
 namespace WinFormsClient {
     public partial class Form1 : Form {
 
-        private const string DbName = "demo";
+        private string DbName = "demo";
         private const string ServiceName = "Soneta.Examples.Example10.Extender.ICennikSerwis, Soneta.Examples";
 
         public Form1() {
             InitializeComponent();
+            var dbName = ConfigurationManager.AppSettings["DbName"];
+            if (!string.IsNullOrEmpty(dbName)) {
+                DbName = dbName;
+            }
         }
 
         private async void button1_Click(object sender, EventArgs e) {
